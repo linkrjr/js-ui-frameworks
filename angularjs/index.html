@@ -1,0 +1,85 @@
+<!doctype html>
+<html ng-app="todoApp">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AngularJS Todo App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <div ng-controller="TodoController">
+      <div class="todo-container">
+        <div class="todo-card">
+          <div class="card-header">
+            <h1>My Todos</h1>
+            <p class="subtitle">
+              {{ completedCount() }} of {{ todos.length }} completed
+            </p>
+          </div>
+
+          <div class="card-content">
+            <div class="input-section">
+              <input
+                type="text"
+                class="todo-input"
+                placeholder="Add a new todo"
+                ng-model="inputValue"
+                ng-keypress="$event.key === 'Enter' && addTodo()"
+              />
+              <button class="btn btn-primary" ng-click="addTodo()">
+                Add
+              </button>
+            </div>
+
+            <div ng-if="todos.length === 0" class="empty-state">
+              <p>No todos yet. Add one to get started!</p>
+            </div>
+
+            <div ng-if="todos.length > 0" class="todo-list">
+              <div
+                ng-repeat="todo in todos"
+                class="todo-item"
+                ng-class="{ completed: todo.completed }"
+              >
+                <input
+                  type="checkbox"
+                  class="todo-checkbox"
+                  ng-model="todo.completed"
+                  ng-change="onTodoChange()"
+                />
+                <span class="todo-text">{{ todo.text }}</span>
+                <button
+                  class="btn-delete"
+                  ng-click="deleteTodo(todo.id)"
+                  title="Delete"
+                >
+                  delete
+                </button>
+              </div>
+            </div>
+
+            <div ng-if="todos.length > 0" class="actions">
+              <button class="btn btn-secondary" ng-click="clearCompleted()">
+                Clear Completed
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.3/angular.min.js"></script>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
