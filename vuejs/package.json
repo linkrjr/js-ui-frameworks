@@ -1,0 +1,26 @@
+{
+  "name": "vuejs-todo",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest"
+  },
+  "dependencies": {
+    "vue": "^3.3.6",
+    "vuetify": "^3.4.0",
+    "@mdi/font": "^7.0.0"
+  },
+  "devDependencies": {
+    "vite": "^5.1.0",
+    "@vitejs/plugin-vue": "^4.0.0",
+    "typescript": "^5.1.0",
+    "vitest": "^1.1.5",
+    "@testing-library/vue": "^8.1.0",
+    "@vue/test-utils": "^2.2.0",
+    "jsdom": "^22.1.0"
+  }
+}

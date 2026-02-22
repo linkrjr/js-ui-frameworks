@@ -1,0 +1,162 @@
+.todo-container {
+  width: 100% !important;
+  height: 100% !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  padding: 20px !important;
+}
+
+.todo-card {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1) !important;
+}
+
+.card-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 24px !important;
+  text-align: center;
+}
+
+.header-title {
+  margin: 0 !important;
+  margin-bottom: 8px !important;
+  font-size: 32px !important;
+  font-weight: 500 !important;
+}
+
+.subtitle {
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-size: 14px !important;
+}
+
+.card-content {
+  padding: 24px !important;
+}
+
+.input-section {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.todo-input {
+  flex: 1 !important;
+}
+
+.todo-input .MuiOutlinedInput-root {
+  border-radius: 4px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.todo-input .MuiOutlinedInput-root:hover fieldset {
+  border-color: #667eea !important;
+}
+
+.todo-input .MuiOutlinedInput-root.Mui-focused fieldset {
+  border-color: #667eea !important;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.btn-add {
+  background-color: #667eea !important;
+  color: white !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  font-weight: 500 !important;
+  padding: 10px 24px !important;
+  border-radius: 4px !important;
+  align-self: flex-end;
+  white-space: nowrap;
+}
+
+.btn-add:hover {
+  background-color: #5568d3 !important;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4) !important;
+}
+
+.btn-add:active {
+  transform: scale(0.98);
+}
+
+.empty-state {
+  text-align: center;
+  padding: 40px 20px;
+  color: #999;
+  font-size: 16px;
+}
+
+.todo-list {
+  box-shadow: none !important;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  margin-bottom: 0 !important;
+}
+
+.todo-list .MuiList-root {
+  padding: 0 !important;
+}
+
+.todo-item {
+  padding: 16px !important;
+  border-bottom: 1px solid #f0f0f0;
+  transition: background-color 0.2s;
+}
+
+.todo-item:last-child {
+  border-bottom: none !important;
+}
+
+.todo-item:hover {
+  background-color: #f9f9f9;
+}
+
+.todo-item.completed {
+  opacity: 0.6;
+}
+
+.todo-item.completed .todo-text .MuiListItemText-primary {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.todo-text .MuiListItemText-primary {
+  color: #1f1f1f;
+  font-size: 16px;
+  word-break: break-word;
+}
+
+.btn-delete {
+  color: #d32f2f !important;
+  margin-left: 8px;
+  flex-shrink: 0;
+}
+
+.btn-delete:hover {
+  background-color: rgba(211, 47, 47, 0.1) !important;
+  color: #b71c1c !important;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.btn-clear {
+  background-color: #ff9800 !important;
+  color: white !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  font-weight: 500 !important;
+}
+
+.btn-clear:hover {
+  background-color: #e68900 !important;
+  box-shadow: 0 4px 12px rgba(255, 152, 0, 0.4) !important;
+}
